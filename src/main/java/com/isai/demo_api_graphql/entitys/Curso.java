@@ -33,7 +33,7 @@ public class Curso {
 
     private String profesor;
 
-    @OneToMany(targetEntity = Estudiante.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(targetEntity = Estudiante.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "curso")
     private List<Estudiante> estudiantes;
 
 }
